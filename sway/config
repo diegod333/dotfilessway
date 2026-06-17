@@ -115,14 +115,14 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # =============================================================================
-# CAPTURAS DE PANTALLA CON FLAMESHOT (WAYLAND)
+# CAPTURAS DE PANTALLA CON GRIMP Y SLURP (WAYLAND)
 # =============================================================================
 
-# Opción 1: Al apretar Fn + ImprPant en tu laptop
-bindsym Print exec XDG_CURRENT_DESKTOP=sway flameshot gui
+# Capturar toda la pantalla al portapapeles con la tecla Print Screen
+bindsym Print exec grim - | wl-copy
 
-# Opción 2: Alternativa cómoda con una sola mano (Super + Shift + S)
-bindsym $mod+Shift+s exec XDG_CURRENT_DESKTOP=sway flameshot gui
+# Capturar una región seleccionada al portapapeles con Mod + Shift + S
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
 
 # =============================================================================
 # ARRANQUE DE BARRA Y ENTORNO (WAYBAR)
@@ -132,4 +132,3 @@ exec_always killall waybar; waybar > /dev/null 2>&1 &
 
 # Fix definitivo para que Flameshot y los permisos de Wayland funcionen al tiro
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
