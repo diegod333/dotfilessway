@@ -1,0 +1,27 @@
+{
+    "layer": "top",
+    "position": "bottom", // En la foto está abajo
+    "height": 30,
+    "modules-left": ["custom/music"],
+    "modules-center": [],
+    "modules-right": ["cpu", "memory", "network", "pulseaudio", "battery", "clock"],
+
+    "cpu": {
+        "format": "cpu {usage}%"
+    },
+    "memory": {
+        "format": "mem {percentage}%"
+    },
+    "battery": {
+        "format": "bat {capacity}%"
+    },
+    "clock": {
+        "format": "{:%H:%M}"
+    },
+    "custom/music": {
+        "format": "🎵 {}",
+        "escape": true,
+        "interval": 5,
+        "exec": "playerctl metadata --format '{{ artist }} - {{ title }}' 2> /dev/null || echo 'No playing'"
+    }
+}

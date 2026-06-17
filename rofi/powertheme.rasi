@@ -1,0 +1,52 @@
+* {
+    /* Cambiamos a fondo negro con 80% de opacidad para que haga juego perfecto */
+    background-color: #000000cc; 
+    text-color:       #dfdfdf; 
+    font:             "JetBrainsMono Nerd Font Bold 10";
+}
+
+window {
+    transparency:     "real";
+    border:           1px;      
+    border-color:     #444444;  /* Mantenemos el borde fino gris de la barra */
+    border-radius:    0px;      
+    width:            220px;
+    padding:          10px;
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    background-color: transparent;
+    children:         [ listview ];
+}
+
+listview {
+    background-color: transparent;
+    lines:            3;
+    spacing:          4px;
+    scrollbar:        false;
+    border:           0px;
+}
+
+element {
+    background-color: transparent;
+    padding:          6px 12px;
+    border-radius:    0px;
+}
+
+element-text, element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+/* La selección resalta con el gris de tu barra, limpio y uniforme */
+element selected {
+    background-color: #444444d9; 
+    text-color:       #ffffff;
+}
+
+element selected element-text, element selected element-icon {
+    background-color: transparent;
+    text-color:       #ffffff;
+}

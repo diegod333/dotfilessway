@@ -1,0 +1,67 @@
+* {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "JetBrainsMono Nerd Font", "DejaVu Sans Mono";
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+/* Fondo completo de borde a borde */
+window#waybar {
+    background-color: #222222;
+    color: #dfdfdf;
+}
+
+/* --- WORKSPACES (IZQUIERDA) --- */
+#workspaces button {
+    color: #777777;
+    padding: 0 12px;
+}
+
+#workspaces button.focused {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+#workspaces button.visible {
+    color: #dfdfdf;
+}
+
+/* --- MÚSICA (CENTRO) --- */
+#custom-mpris-title {
+    color: #dfdfdf;
+    padding: 0 15px;
+}
+
+#custom-mpris-prev {
+    background-color: #333333;
+    color: #aaaaaa;
+    padding: 0 10px;
+}
+
+#custom-mpris-toggle {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 0 12px;
+}
+
+#custom-mpris-next {
+    background-color: #333333;
+    color: #aaaaaa;
+    padding: 0 10px;
+}
+
+/* --- BLOQUES DE LA DERECHA --- */
+#pulseaudio, #battery, #clock {
+    color: #dfdfdf;
+    padding: 0 12px;
+}
+
+/* Botón de apagado al extremo derecho */
+#custom-power {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 0 15px;
+}

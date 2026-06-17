@@ -1,0 +1,69 @@
+* {
+    background-color: #000000cc; 
+    text-color:       #dfdfdf;
+    font:             "JetBrainsMono Nerd Font Bold 10";
+}
+
+window {
+    transparency:     "real";
+    border:           1px;
+    border-color:     #444444; 
+    border-radius:    0px; 
+    width:            500px; 
+    height:           350px; 
+    padding:          15px;
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: transparent;
+    text-color:       #ffffff;
+    padding:          0px 0px 10px 0px;
+    children:         [ entry ];
+}
+
+entry {
+    background-color: #11111199; 
+    text-color:       #ffffff;
+    placeholder:      " Search apps...";
+    placeholder-color:#666666;
+    padding:          6px;
+}
+
+listview {
+    background-color: transparent;
+    lines:            8;
+    spacing:          2px;
+    scrollbar:        false;
+    border:           0px;
+}
+
+element {
+    background-color: transparent;
+    padding:          6px 12px;
+    border-radius:    0px;
+}
+
+/* Forzamos a que el texto y el icono sean transparentes por sí mismos */
+element-text, element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+/* Al seleccionar, solo el contenedor padre toma el color gris de tu barra */
+element selected {
+    background-color: #444444d9; 
+    text-color:       #ffffff;
+}
+
+/* Nos aseguramos de que el texto seleccionado mantenga la herencia correcta */
+element selected element-text, element selected element-icon {
+    background-color: transparent;
+    text-color:       #ffffff;
+}
