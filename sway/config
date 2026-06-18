@@ -42,7 +42,7 @@ client.unfocused        #1c1f24 #1c1f24 #5b6268 #1c1f24   #1c1f24
 client.urgent           #ff6c6b #ff6c6b #ffffff #ff6c6b   #ff6c6b
 
 # Fondo de pantalla (Color oscuro mate por defecto, puedes cambiarlo por tu imagen)
-output * bg /home/diegopdal/Pictures/Wallpapers/1.jpg fill
+output * bg /home/diegopdal/Pictures/Wallpapers/3.jpg fill
 
 # =============================================================================
 # ATAJOS DE TECLADO ULTRA MINIMALISTAS
@@ -59,6 +59,9 @@ bindsym $mod+q kill
 
 # --- REINICIAR ENTORNO ---
 bindsym $mod+Shift+c reload
+
+# --- CAMBIAR WALLPAPER CON EXEC ---
+bindsym $mod+Shift+w exec ~/dotfiles/scripts/cambiar_fondo.sh
 
 # --- MOVER FOCO (Estilo Vim / bspwm) ---
 bindsym $mod+h focus left

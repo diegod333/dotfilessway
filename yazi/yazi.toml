@@ -1,0 +1,13 @@
+[mgr]
+show_hidden = true
+sort_by     = "alphabetical"
+
+[preview]
+image_preview_delay = 10
+wrap_mode           = "yes"
+image_origin        = "kitty"
+
+[opener]
+edit = [
+	{ run = 'micro "$@"', block = true, for = "unix" }
+]
